@@ -1,0 +1,59 @@
+
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+
+
+public class ListMain {
+	
+	public static void main(String[] args) {
+		
+		
+//		DeeltijdStudent deeltijd1 = new DeeltijdStudent("Freek", "Vonk", "0000332", getDate("1992-12-05"));
+//		DeeltijdStudent deeltijd2 = new DeeltijdStudent("Madelief", "de Vries", "0000332", getDate("1992-12-05"));
+
+				
+		List docenten = new ArrayList();
+		
+		docenten.add(new Docent("Peter", "Schuler", "Dhr.", getDate("1980-12-04")));
+		docenten.add(new Docent("Peter", "Schuler", "Dhr.", getDate("1980-12-04")));
+		docenten.add(new Docent("Carla", "Bullstronk", "Mvr.", getDate("1980-12-04")));
+		
+		Iterator docentenIt = docenten.iterator();
+		
+		while(docentenIt.hasNext()) {
+			Docent docent = (Docent) docentenIt.next();
+			System.out.format("%s %s, %s %n", docent.getTitel(), docent.getAchternaam(), docent.getVoornaam());
+		}
+		
+		List studenten = new ArrayList();
+		
+		studenten.add(new Student("Henk", "Wijmand", "0000312", getDate("1992-12-05")));
+		studenten.add(new Student("Klaas", "Bovenkerk", "0000313", getDate("1999-04-25")));
+		studenten.add(new Student("Franka", "Machtenvelt", "000190", getDate("1980-12-24")));
+		studenten.add(new Student("Henk", "Vars", "0000452", getDate("1978-08-01")));
+		studenten.add(new Student("Henk", "Vars", "0000452", getDate("1978-08-01")));
+
+		Iterator studentenIt = studenten.iterator();
+		
+		while(studentenIt.hasNext()) {
+			Docent docent = (Docent) studentenIt.next();
+			System.out.format("%s %s, %s %n", docent.getTitel(), docent.getAchternaam(), docent.getVoornaam());
+		}
+
+	}
+	
+	 public static Date getDate(String date) {
+	     try {
+	         return new SimpleDateFormat("yyyy-MM-dd").parse(date);
+	     } catch (ParseException e) {
+	         return null;
+	     }
+	  }
+
+}

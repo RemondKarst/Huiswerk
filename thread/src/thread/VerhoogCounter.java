@@ -1,0 +1,20 @@
+package thread;
+
+public class VerhoogCounter extends Thread {
+	private Counter counter;
+	private int aantal;
+
+	VerhoogCounter(Counter counter, int aantal) {
+		this.counter = counter;
+		this.aantal = aantal;
+	}
+
+	public void run() {
+		for (int i = 0; i < aantal; i++) {
+			counter.addOne();
+			yield();
+
+		}
+	}
+
+}

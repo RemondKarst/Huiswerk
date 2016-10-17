@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Klas.java&apos; to &apos;Lists/src/ocp.genericsandcollections.collections&apos;&#x0D;&#x0A;- Original project: &apos;Generics&apos;&#x0D;&#x0A;- Destination element: &apos;Lists/src/ocp.genericsandcollections.collections&apos;&#x0D;&#x0A;- Original element: &apos;Klas.java&apos;" description="Copy compilation unit" destination="=Lists/src&lt;ocp.genericsandcollections.collections" element1="/src&lt;{Klas.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1475757152322" units="1" version="1.0"/>
+</session>

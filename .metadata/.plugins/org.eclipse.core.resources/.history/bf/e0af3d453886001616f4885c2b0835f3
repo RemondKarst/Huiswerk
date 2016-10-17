@@ -1,0 +1,14 @@
+package thread;
+
+public class Main {
+	public static Counter counter = new Counter();
+	public static int aantal = 100000;
+	public static void main(String args[]) {
+		System.out.println("met de Counter");
+		Thread sing = new Thread(new VerhoogCounter(counter, aantal));
+		Thread dance = new Thread(new VerlaagCounter(counter, aantal));
+		sing.start();
+		dance.start();
+		System.out.println("en klaar is klara");
+	}
+}

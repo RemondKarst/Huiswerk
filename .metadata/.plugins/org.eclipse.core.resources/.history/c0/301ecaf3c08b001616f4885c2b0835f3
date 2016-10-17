@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+
+		List<Student> studenten = new Klas<Student>();
+		// TODO Auto-generated constructor stub
+		studenten.add(new Klas("Henk", "Wijmand", "0000312"));
+		studenten.add(new Klas("Klaas", "Bovenkerk", "0000313"));
+		studenten.add(new Klas("Franka", "Machtenvelt", "000190"));
+		studenten.add(new Klas("Henk", "Vars", "0000452"));
+		studenten.add(new Klas("Henk", "Vars", "0000452"));
+		
+		
+		System.out.println("de beste leerling is"+((Klas) studenten).getBesteLeerling());
+	}
+}

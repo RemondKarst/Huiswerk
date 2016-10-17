@@ -1,0 +1,16 @@
+package thread;
+
+public class Main {
+	public static Counter counter = new Counter();
+	public static int aantal = 10;
+	public static void main(String args[]) throws InterruptedException {
+		System.out.println("met de Counter");
+		Thread sing = new Thread(new VerhoogCounter(counter, aantal));
+		Thread dance = new Thread(new VerlaagCounter(counter, aantal));
+		sing.start();
+		dance.start();
+		sing.join();
+		dance.join();
+		System.out.printf("en klaar is klara counter is %s" , counter);
+	}
+}

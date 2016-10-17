@@ -1,0 +1,17 @@
+class Opdracht1_1 extends Thread {
+	public void run() {
+		System.out.println("Singing.......");
+	}
+
+	public void start() {
+		System.out.println("Starting...");
+	}
+}
+
+class SingAndDance {
+public static void main(String args[]) {
+Thread sing = new Opdracht1_1();
+sing.start();
+System.out.println("Dancing");
+}
+}
